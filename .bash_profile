@@ -23,8 +23,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Add alias to use colors
-alias ls='ls --color=auto'
+alias ls='ls -lh --color=auto'
 alias grep='grep --color'
+alias x='xdg-open'
 
 # Run tmux
 if [[ -z $TMUX ]]; then

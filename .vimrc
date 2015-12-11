@@ -67,13 +67,15 @@ autocmd BufWritePre * :%s/\s\+$//e
 filetype plugin indent on
 
 " Syntastic settings
-" Enable rubocop checker
+" Enable checkers
 let g:syntastic_ruby_checkers = ['rubocop']
-
-" Add Syntastic to status line
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_less_checkers = ['lessc']
+let g:syntastic_sass_checkers = ['sass']
+let g:syntastic_scss_checkers = ['sass', 'scss_lint']
+let g:syntastic_coffee_checkers = ['coffee', 'coffeelint']
+let g:syntastic_markdown_checkers = ['mdl']
+let g:syntastic_sh_checkers = ['checkbashisms', 'shellcheck']
 
 " If enabled, syntastic will do syntax checks when buffers are first loaded as well as on saving
 let g:syntastic_check_on_open = 1
@@ -86,9 +88,6 @@ let g:syntastic_always_populate_loc_list = 1
 
 " When set to 1 the error window will be automatically opened when errors are detected, and closed when none are detected.
 let g:syntastic_auto_loc_list = 1
-
-" When set to 1 the cursor will always jump to the first issue detected, regardless of type
-let g:syntastic_auto_jump = 1
 
 " Keyboard map
 :map <F7> :tabp<CR>
