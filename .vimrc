@@ -1,4 +1,5 @@
 " Run pathogen plugins
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 " Syntax highlighting
@@ -63,6 +64,9 @@ autocmd BufWritePre * :set ff=unix
 " Clean trailing whitespace and EOL markers
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Wrap lines in location list window
+autocmd FileType qf setlocal wrap
+
 " Detect filetypes and indentation based on plugin
 filetype plugin indent on
 
@@ -88,6 +92,9 @@ let g:syntastic_always_populate_loc_list = 1
 
 " When set to 1 the error window will be automatically opened when errors are detected, and closed when none are detected.
 let g:syntastic_auto_loc_list = 1
+
+" Disable folding for markdown files
+let g:vim_markdown_folding_disabled = 1
 
 " Keyboard map
 :map <F7> :tabp<CR>

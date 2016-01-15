@@ -10,6 +10,12 @@ Style/ClassAndModuleChildren:
 Style/Documentation:
     Enabled: false
 
+Style/Send:
+    Enabled: true
+
+Style/SymbolArray:
+    Enabled: true
+
 AllCops:
   RunRailsCops: true
   Include:
