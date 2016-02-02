@@ -93,8 +93,9 @@ let g:syntastic_always_populate_loc_list = 1
 " When set to 1 the error window will be automatically opened when errors are detected, and closed when none are detected.
 let g:syntastic_auto_loc_list = 1
 
-" Disable folding for markdown files
-let g:vim_markdown_folding_disabled = 1
+" Vim-markdown settings
+" Set folding level
+let g:vim_markdown_folding_level = 3
 
 " Keyboard map
 :map <F7> :tabp<CR>

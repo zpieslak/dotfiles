@@ -3,6 +3,11 @@ if [ -f "$HOME/.bashrc" ]; then
   . "$HOME/.bashrc"
 fi
 
+# Include .bash_profile.local if it exists
+if [ -f "$HOME/.bash_profile.local" ]; then
+  . "$HOME/.bash_profile.local"
+fi
+
 # Add home bin path
 if [ -d "$HOME/bin" ]; then
   PATH="$HOME/bin:$PATH"

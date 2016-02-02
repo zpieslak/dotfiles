@@ -1,23 +1,25 @@
 Metrics/LineLength:
   Enabled: false
 
+Rails:
+  Enabled: true
+
 Rails/HasAndBelongsToMany:
-    Enabled: false
+  Enabled: false
 
 Style/ClassAndModuleChildren:
-    Enabled: false
+  Enabled: false
 
 Style/Documentation:
-    Enabled: false
+  Enabled: false
 
 Style/Send:
-    Enabled: true
+  Enabled: true
 
 Style/SymbolArray:
-    Enabled: true
+  Enabled: true
 
 AllCops:
-  RunRailsCops: true
   Include:
     - '**/Rakefile'
     - '**/config.ru'
