@@ -27,3 +27,7 @@ A set of my configuraiton files. Includes: bash, tmux, Ag, Rubocop, Vim.
 ## Install rbenv
 
         install/rbenv.sh
+
+## Install tmux-mem-cpu-load
+
+        install/tmux_mem_cpu_load.sh

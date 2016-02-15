@@ -52,3 +52,6 @@
 [submodule "submodules/rbenv-plugins/ruby-build"]
 	path = submodules/rbenv-plugins/ruby-build
 	url = git@github.com:rbenv/ruby-build.git
+[submodule "submodules/tmux-mem-cpu-load"]
+	path = submodules/tmux-mem-cpu-load
+	url = git@github.com:thewtex/tmux-mem-cpu-load.git

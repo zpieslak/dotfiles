@@ -4,6 +4,9 @@ Metrics/LineLength:
 Rails:
   Enabled: true
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 Rails/HasAndBelongsToMany:
   Enabled: false
 
@@ -20,6 +23,7 @@ Style/SymbolArray:
   Enabled: true
 
 AllCops:
+  TargetRubyVersion: 2.3
   Include:
     - '**/Rakefile'
     - '**/config.ru'
