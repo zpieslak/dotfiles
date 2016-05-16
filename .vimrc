@@ -80,6 +80,7 @@ let g:syntastic_scss_checkers = ['sass', 'scss_lint']
 let g:syntastic_coffee_checkers = ['coffee', 'coffeelint']
 let g:syntastic_markdown_checkers = ['mdl']
 let g:syntastic_sh_checkers = ['checkbashisms', 'shellcheck']
+let g:syntastic_haml_checkers = ['haml', 'haml_lint']
 
 " If enabled, syntastic will do syntax checks when buffers are first loaded as well as on saving
 let g:syntastic_check_on_open = 1
