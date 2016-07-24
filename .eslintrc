@@ -1,7 +1,4 @@
 rules:
-  indent:
-    - 2
-    - 4
   quotes:
     - 2
     - single
@@ -11,6 +8,12 @@ rules:
   semi:
     - 2
     - never
+  indent:
+    - 2
+    - 2
+  no-unused-vars:
+    - 2
+    - { 'argsIgnorePattern': '^_' }
 env:
   browser: true
   jquery: true

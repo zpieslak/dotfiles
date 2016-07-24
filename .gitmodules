@@ -55,3 +55,6 @@
 [submodule "submodules/tmux-mem-cpu-load"]
 	path = submodules/tmux-mem-cpu-load
 	url = git@github.com:thewtex/tmux-mem-cpu-load.git
+[submodule "submodules/vim/ansible-vim"]
+	path = submodules/vim/ansible-vim
+	url = git@github.com:pearofducks/ansible-vim.git

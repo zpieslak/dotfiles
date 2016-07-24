@@ -98,12 +98,20 @@ let g:syntastic_auto_loc_list = 1
 " Set folding level
 let g:vim_markdown_folding_level = 3
 
+" Ansible-vim settings
+" Highlight and brighten only instances of key= found on newlines
+let g:ansible_attribute_highlight = 'ob'
+
 " Keyboard map
 :map <F7> :tabp<CR>
 :map <F8> :tabn<CR>
 nmap <S-Tab> <<
 nmap <Tab> >>
 imap <S-Tab> <Esc><<i
+
+" Command line abbreviations
+" Typing  :e %%/ when editing the file sets current directory
+cabbr <expr> %% expand('%:p:h')
 
 " Silence search highlights
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
