@@ -1,3 +1,8 @@
+parserOptions:
+  sourceType: module
+  ecmaVersion: 6
+  ecmaFeatures:
+    jsx: true
 rules:
   quotes:
     - 2
@@ -14,6 +19,8 @@ rules:
   no-unused-vars:
     - 2
     - { 'argsIgnorePattern': '^_' }
+  no-extra-parens:
+    - 2
 env:
   browser: true
   jquery: true

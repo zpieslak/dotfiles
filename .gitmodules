@@ -58,3 +58,6 @@
 [submodule "submodules/vim/ansible-vim"]
 	path = submodules/vim/ansible-vim
 	url = git@github.com:pearofducks/ansible-vim.git
+[submodule "submodules/vim/vim-autofix"]
+	path = submodules/vim/vim-autofix
+	url = git@github.com:zpieslak/vim-autofix.git

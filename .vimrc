@@ -57,6 +57,12 @@ set noswapfile
 " Show matching brackets
 set showmatch
 
+" Automatically read file, that was chanegd by external tool
+set autoread
+
+" Always show tab labels
+set showtabline=2
+
 " Autocmd settings
 " Replace any CRLF to LF line endings
 autocmd BufWritePre * :set ff=unix
@@ -110,7 +116,7 @@ nmap <Tab> >>
 imap <S-Tab> <Esc><<i
 
 " Command line abbreviations
-" Typing  :e %%/ when editing the file sets current directory
+" Typing :e %%/ when editing the file sets current directory
 cabbr <expr> %% expand('%:p:h')
 
 " Silence search highlights
