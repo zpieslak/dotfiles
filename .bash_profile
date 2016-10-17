@@ -16,8 +16,8 @@ fi
 # Git branch status
 export PS1='\w$(__git_ps1 "[%s]")\$ '
 
-# Set TERM to support 256 colors for tmux
-export TERM=screen-256color
+# Set TERM for tmux 24-bit colors support
+export TERM=xterm-256color
 
 # Set Vim as default editor
 export EDITOR=vim

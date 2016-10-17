@@ -14,3 +14,4 @@ coverage/
 *.log*
 CHANGES
 README
+spec/examples.txt

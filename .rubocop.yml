@@ -28,6 +28,9 @@ Style/Send:
 Style/SymbolArray:
   Enabled: true
 
+Style/VariableNumber:
+  EnforcedStyle: snake_case
+
 AllCops:
   Include:
     - '**/Rakefile'
