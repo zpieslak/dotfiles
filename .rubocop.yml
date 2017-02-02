@@ -4,6 +4,9 @@ Metrics/LineLength:
 Rails:
   Enabled: true
 
+Rails/SkipsModelValidations:
+  Enabled: false
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 
@@ -32,6 +35,7 @@ Style/VariableNumber:
   EnforcedStyle: snake_case
 
 AllCops:
+  DisplayCopNames: true
   Include:
     - '**/Rakefile'
     - '**/config.ru'
