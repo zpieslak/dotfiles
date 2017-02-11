@@ -27,3 +27,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # Rbenv configuration
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Nodenv configuration
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"

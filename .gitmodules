@@ -61,3 +61,12 @@
 [submodule "submodules/vim/vim-autofix"]
 	path = submodules/vim/vim-autofix
 	url = git@github.com:zpieslak/vim-autofix.git
+[submodule "submodules/vim/vim-mustache-handlebars"]
+	path = submodules/vim/vim-mustache-handlebars
+	url = git@github.com:mustache/vim-mustache-handlebars.git
+[submodule "submodules/nodenv"]
+	path = submodules/nodenv
+	url = git@github.com:nodenv/nodenv.git
+[submodule "submodules/nodenv-plugins/node-build"]
+	path = submodules/nodenv-plugins/node-build
+	url = git@github.com:nodenv/node-build.git

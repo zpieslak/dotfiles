@@ -28,6 +28,10 @@ A set of my configuraiton files. Includes: bash, tmux, Ag, Rubocop, Vim.
 
         install/rbenv.sh
 
+## Install nodenv
+
+        install/nodenv.sh
+
 ## Install tmux-mem-cpu-load
 
         install/tmux_mem_cpu_load.sh
