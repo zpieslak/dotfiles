@@ -1,14 +1,5 @@
-[include]
-  path = ~/.gitconfig.local
-[push]
-  default = simple
+[user]
+  email = zpieslak@gmail.com
+  name = Zbigniew Pieślak
 [color]
   ui = auto
-[diff]
-  tool = vimdiff
-[core]
-  editor = vim
-[merge]
-  tool = vimdiff
-[difftool]
-  prompt = false

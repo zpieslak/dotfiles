@@ -1,16 +1,70 @@
-Metrics/LineLength:
+---
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+  - rubocop-thread_safety
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.7
+  DisplayStyleGuide: true
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - spec/cache/**/*
+    - tmp/**/*
+
+Layout/LineLength:
   Enabled: false
+
+Lint/EmptyBlock:
+  Exclude:
+    - spec/**/*
+
+Lint/UnreachableCode:
+  Exclude:
+    - app/concepts/**/operation/**
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+Naming/MethodName:
+  Exclude:
+    - app/concepts/**/macro/**
+
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+  Exclude:
+    - config/routes.rb
 
 Rails:
   Enabled: true
 
-Rails/SkipsModelValidations:
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - test
+    - production
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/requests/**/*
+
+RSpec/ExampleLength:
   Enabled: false
 
-Style/FrozenStringLiteralComment:
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/MultipleExpectations:
   Enabled: false
 
-Rails/HasAndBelongsToMany:
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
+
+RSpec/NamedSubject:
   Enabled: false
 
 Style/ClassAndModuleChildren:
@@ -19,30 +73,9 @@ Style/ClassAndModuleChildren:
 Style/Documentation:
   Enabled: false
 
-Style/Lambda:
-  EnforcedStyle: literal
+Style/FrozenStringLiteralComment:
+  Enabled: false
 
-Style/MethodDefParentheses:
-  EnforcedStyle: require_no_parentheses
-
-Style/Send:
-  Enabled: true
-
-Style/SymbolArray:
-  Enabled: true
-
-Style/VariableNumber:
-  EnforcedStyle: snake_case
-
-AllCops:
-  DisplayCopNames: true
-  Include:
-    - '**/Rakefile'
-    - '**/config.ru'
+Style/SignalException:
   Exclude:
-    - 'bin/**/*'
-    - 'doc/**/*'
-    - 'db/**/*'
-    - 'public/**/*'
-    - 'tmp/**/*'
-    - 'vendor/**/*'
+    - app/concepts/**/operation/**
