@@ -64,18 +64,27 @@ set shortmess=at
 " Number of screen lines to use for the command line
 set cmdheight=2
 
+" Disable viminfo
+set viminfo=""
+
 " Autocmd settings
 " Replace any CRLF to LF line endings
-autocmd BufWritePre * :set ff=unix
+au BufWritePre * :set ff=unix
 
 " Clean trailing whitespace and EOL markers
-autocmd BufWritePre * :%s/\s\+$//e
+au BufWritePre * :%s/\s\+$//e
 
 " Wrap lines in location list window
-autocmd FileType qf setlocal wrap
+au FileType qf setlocal wrap
 
 " Mark es6 as javascript
-autocmd BufRead,BufNewFile *.es6 set filetype=javascript
+au BufRead,BufNewFile *.es6 set ft=javascript
+
+" Mark yaml.cloudformation as cloudformation
+au BufRead,BufNewFile *.template.yaml set ft=yaml.cloudformation
+
+" Mark ssh config
+au BufRead,BufNewFile */.ssh/conf.d/* setf sshconfig
 
 " Detect filetypes and indentation based on plugin
 filetype plugin indent on
@@ -108,25 +117,27 @@ let g:ale_linters = {
 \ 'ansible': ['ansible_lint'],
 \ 'cs': ['OmniSharp'],
 \ 'haskell': ['ghc'],
-\ 'javascript': ['eslint'],
-\ 'json' : ['jq'],
+\ 'javascript': ['eslint', 'prettier'],
+\ 'json' : ['jq', 'prettier'],
+\ 'markdown' : ['languagetool'],
 \ 'python' : ['flake8'],
 \ 'ruby' : ['rubocop'],
 \ 'terraform' : ['terraform'],
 \ 'typescript' : ['tslint'],
 \ 'typescriptreact' : ['tslint'],
 \ 'yaml' : ['yamllint'],
+\ 'yaml.cloudformation' : ['cloudformation'],
 \}
 
 " Fix files
 let g:ale_fixers = {
 \ 'cs': ['dotnet-format'],
-\ 'javascript': ['eslint'],
+\ 'javascript': ['eslint', 'prettier'],
 \ 'python' : ['autopep8'],
 \ 'ruby' : ['rubocop'],
 \ 'json' : ['jq'],
 \ 'terraform' : ['terraform'],
-\ 'typescript' : ['tslint'],
+\ 'typescript' : ['prettier', 'tslint'],
 \ 'typescriptreact' : ['tslint'],
 \}
 
@@ -139,9 +150,6 @@ let g:ale_fix_on_save = 1
 " Map Ale wrap
 " nmap <silent> <A-k> <Plug>(ale_previous_wrap)
 " nmap <silent> <A-j> <Plug>(ale_next_wrap)
-
-" Set synthax for ssh config
-au BufNewFile,BufRead */.ssh/conf.d/* setf sshconfig
 
 augroup omnisharp_commands
   autocmd!

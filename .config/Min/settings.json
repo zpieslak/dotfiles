@@ -26,5 +26,9 @@
   "keyMap": {
     "goBack": "option+left",
     "goForward": "option+right"
-  }
+  },
+  "systemShouldUseDarkColors": false,
+  "darkThemeIsActive": false,
+  "lastBookmarksBackup": 1653978591968,
+  "translatePrivacyPrompt": true
 }

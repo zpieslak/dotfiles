@@ -3,12 +3,18 @@ import XMonad.Actions.SpawnOn
 import XMonad.Hooks.FadeWindows
 import XMonad.Util.EZConfig
 import XMonad.Util.SpawnOnce
+-- import Data.Map
+
+-- myMouseBindings (XConfig {XMonad.modMask = modMask}) = Data.Map.fromList $ []
+-- myMouseBindings (XConfig {}) = Data.Map.fromList $ []
 
 main = xmonad $ def
   {
     terminal = "alacritty",
     modMask = mod4Mask,
     borderWidth = 0,
+    focusFollowsMouse = False,
+    -- mouseBindings = XConfig {},
     logHook = fadeWindowsLogHook $ composeAll [
       opaque,
       isUnfocused --> transparency 0.3
@@ -24,13 +30,14 @@ main = xmonad $ def
     ] <+> manageSpawn <+> manageHook def,
     startupHook = do
       spawnOnce "alacritty"
-      spawnOnce "chromium gmail.com app.slack.com/client teams.microsoft.com live.com"
+      spawnOnce "chromium gmail.com app.slack.com/client teams.microsoft.com outlook.office.com/mail"
       spawnOnce "min"
       spawnOnce "keepassxc"
   } `additionalKeysP` [
-    -- ("<XF86MonBrightnessUp>", spawn "xbacklight +20"),
-    -- ("<XF86MonBrightnessDown>", spawn "xbacklight -20"),
+    ("M-c", spawn "dunstctl close-all"),
     ("<Print>", spawn "~/bin/screenshot.sh"),
+    ("<XF86MonBrightnessUp>", spawn "~/bin/dunst/backlight.sh 1"),
+    ("<XF86MonBrightnessDown>", spawn "~/bin/dunst/backlight.sh -1"),
     ("<XF86AudioLowerVolume>", spawn "~/bin/dunst/volume.sh 2dB- unmute"),
     ("<XF86AudioRaiseVolume>", spawn "~/bin/dunst/volume.sh 2dB+ unmute"),
     ("<XF86AudioMute>", spawn "~/bin/dunst/volume.sh mute"),
