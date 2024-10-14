@@ -1,0 +1,9 @@
+extends: default
+rules:
+  document-start: disable
+  line-length: disable
+  octal-values:
+    forbid-implicit-octal: true
+  quoted-strings:
+    quote-type: double
+    required: only-when-needed
