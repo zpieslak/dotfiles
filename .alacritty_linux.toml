@@ -1,26 +1,26 @@
-[colors.bright]
-black = "0x002b36"
-blue = "0x839496"
-cyan = "0x93a1a1"
-green = "0x586e75"
-magenta = "0x6c71c4"
-red = "0xcb4b16"
-white = "0xfdf6e3"
-yellow = "0x657b83"
+[colors.primary]
+background = "0x002b36"  # Base03: Dark background
+foreground = "0x839496"  # Base0: Main text color
 
 [colors.normal]
-black = "0x073642"
-blue = "0x268bd2"
-cyan = "0x2aa198"
-green = "0x859900"
-magenta = "0xd33682"
-red = "0xdc322f"
-white = "0xeee8d5"
-yellow = "0xb58900"
+black   = "0x073642"  # Base02
+red     = "0xdc322f"  # Red
+green   = "0x859900"  # Green
+yellow  = "0xb58900"  # Yellow
+blue    = "0x268bd2"  # Blue
+magenta = "0xd33682"  # Magenta
+cyan    = "0x2aa198"  # Cyan
+white   = "0xeee8d5"  # Base2
 
-[colors.primary]
-background = "0x002b36"
-foreground = "0x839496"
+[colors.bright]
+black   = "0x002b36"  # Base03
+red     = "0xcb4b16"  # Bright Red (Orange)
+green   = "0x586e75"  # Base01
+yellow  = "0x657b83"  # Base00
+blue    = "0x839496"  # Base0
+magenta = "0x6c71c4"  # Violet
+cyan    = "0x93a1a1"  # Base1
+white   = "0xfdf6e3"  # Base3
 
 [font]
 size = 9.0
